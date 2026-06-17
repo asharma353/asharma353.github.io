@@ -159,6 +159,7 @@
     <div class="navlinks">
       <a href="#intersection">Approach</a>
       <a href="#fieldnotes">Field&nbsp;Notes</a>
+      <a href="#platform">Platform</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a class="ext" href="Ayush_Sharma_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
@@ -220,10 +221,72 @@
   </div>
 </section>
 
-<!-- 03 PROJECTS -->
+<!-- 03 PLATFORM WORK -->
+<section id="platform">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">Platform work @ Mogean</h2></div>
+    <p class="reveal" style="color:var(--muted);max-width:64ch;margin:-34px 0 42px;font-family:var(--serif);font-size:1.05rem">The core of the role — proprietary, so described rather than linked. This is the geospatial ML platform the business runs on.</p>
+    <div class="projects">
+
+      <div class="proj reveal">
+        <div class="media" style="background:linear-gradient(135deg,#15171d,#0d0f14)">
+          <div style="font-family:var(--mono);color:var(--faint);font-size:12px;text-align:center;padding:28px;line-height:1.95">
+            <span style="color:var(--amber);font-size:22px;font-weight:600">~22M POIs</span><br>
+            762 brand APIs + Foursquare/Overture<br>
+            + federal registries · monthly refresh
+          </div>
+        </div>
+        <div class="body">
+          <div class="tag">Geospatial ETL · Entity Resolution</div>
+          <h3>POI Master Pipeline</h3>
+          <p>A unified U.S. points-of-interest dataset at commercial-grade scale (~22M records). Reconciles authoritative brand-store locations (40+ custom site extractors) with Foursquare + Overture Maps and federal registries (FDIC, CMS, NCES, FAA) via a multi-tier entity-matching cascade, deterministic dedup, and sub-location parent-linking (100% link rate). Every record is quality-scored (recency × stability × source confidence) and refreshed monthly by a self-supervising agentic loop.</p>
+          <div class="stack"><span>Python</span><span>SQLAlchemy/Alembic</span><span>GeoPandas</span><span>geohash</span><span>PyArrow</span><span>agentic loop</span></div>
+          <div class="links"><span style="color:var(--faint)">Private · Mogean</span></div>
+        </div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="media" style="background:linear-gradient(135deg,#15171d,#0d0f14)">
+          <div style="font-family:var(--mono);color:var(--faint);font-size:12px;text-align:center;padding:28px;line-height:1.95">
+            natural language → <span style="color:var(--amber)">validated SQL</span><br>
+            → AWS Athena → charts + AI summary<br>
+            security + cost guards · App Runner CI/CD
+          </div>
+        </div>
+        <div class="body">
+          <div class="tag">NL→SQL · Geospatial Analytics</div>
+          <h3>Visitor-Analytics Portal</h3>
+          <p>A natural-language analytics portal for a retail-analytics client: business users ask questions in plain English, and the system converts them to <em>validated</em> SQL (injection + cost guards), runs them on AWS Athena over foot-traffic time-series, and returns charts, AI summaries, and exports. Containerized Gradio on AWS App Runner with autoscaling and GitHub Actions → ECR CI/CD.</p>
+          <div class="stack"><span>Claude</span><span>AWS Athena</span><span>Gradio</span><span>App Runner</span><span>Docker</span><span>GitHub Actions</span></div>
+          <div class="links"><span style="color:var(--faint)">Private · client work</span></div>
+        </div>
+      </div>
+
+      <div class="proj reveal">
+        <div class="media" style="background:linear-gradient(135deg,#15171d,#0d0f14)">
+          <div style="font-family:var(--mono);color:var(--faint);font-size:12px;text-align:center;padding:28px;line-height:1.95">
+            draw on map → filter → <span style="color:var(--amber)">foot-traffic</span><br>
+            1,200+ FSQ categories · 1,700+ brands<br>
+            Claude Haiku · Modal serverless
+          </div>
+        </div>
+        <div class="body">
+          <div class="tag">Geospatial UI · LLM filtering</div>
+          <h3>POI Explorer</h3>
+          <p>An interactive location explorer: draw a polygon on a map, then filter 1,200+ Foursquare categories and 1,700+ brands by natural language (LLM-powered semantic + fuzzy matching) and pull per-location foot-traffic. High-precision coordinate handling end to end; deployed serverless on Modal against an AWS Lambda geospatial backend.</p>
+          <div class="stack"><span>Gradio</span><span>Folium/Leaflet</span><span>Claude Haiku</span><span>Modal</span><span>AWS Lambda</span></div>
+          <div class="links"><span style="color:var(--faint)">Private · Mogean</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 04 PROJECTS -->
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">03</span><h2 class="sec-title">Open source</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">Open source</h2></div>
     <div class="projects">
       <div class="proj reveal">
         <div class="media"><img src="assets/media/patent-assist-demo.gif" alt="Patent Assist demo — similarity search and overlap detection" loading="lazy" /></div>
@@ -300,10 +363,10 @@
   </div>
 </section>
 
-<!-- 04 SIGNALS -->
+<!-- 05 SIGNALS -->
 <section id="signals">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">04</span><h2 class="sec-title">Signals</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Signals</h2></div>
     <div class="signals reveal">
       <div class="sig"><div class="y">1st</div><p><b>Microsoft Hackathon</b> <span>— winning model predicting housing-market listing time &amp; price</span></p></div>
       <div class="sig"><div class="y">top 1%</div><p><b>Prompt Olympics</b>, AI Tinkerers NYC <span>— 3rd place across four elimination rounds</span></p></div>
@@ -315,10 +378,10 @@
   </div>
 </section>
 
-<!-- 05 ABOUT -->
+<!-- 06 ABOUT -->
 <section id="about">
   <div class="wrap">
-    <div class="sec-head reveal"><span class="sec-num">05</span><h2 class="sec-title">Colophon</h2></div>
+    <div class="sec-head reveal"><span class="sec-num">06</span><h2 class="sec-title">Colophon</h2></div>
     <div class="about reveal">
       <p>I was Mogean's first data hire. Nine years later, the geospatial ML platform I built is the system the business runs on. <span class="muted">Along the way I learned the hard part is rarely the model — it's the seam between a research idea and a system someone trusts at 3 a.m.</span></p>
       <p class="muted">Lately I'm most interested in where distributed data systems meet LLM agents: retrieval that actually scales, agents that route instead of guess, and evaluation you can defend. Based in New York. Open to Principal DS, AI Engineer, and ML Engineer roles.</p>
