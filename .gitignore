@@ -1,0 +1,13 @@
+# Publish ONLY the site + a single résumé PDF. Everything else is private.
+*.pdf
+!Ayush_Sharma_Resume.pdf
+*.docx
+*.md
+resume_build/
+.code-review-graph/
+.claude/
+node_modules/
+package.json
+package-lock.json
+.DS_Store
+.~lock*#
